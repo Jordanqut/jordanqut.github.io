@@ -113,7 +113,7 @@ body {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('\static\gallery\reapers.png') no-repeat center center/cover;
+    background: url('/static/gallery/reapers.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -905,14 +905,13 @@ body {
 /* Gallery Container */
 .gallery-container {
     display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+    grid-auto-rows: 200px; /* Ensures consistent row height */
     gap: 10px;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    justify-content: center;
-    max-width: 1200px;
-    margin: auto;
 }
 
-/* Image Styles */
+
+/* Image Styling */
 .gallery-item {
     position: relative;
     overflow: hidden;
@@ -921,29 +920,23 @@ body {
 
 .gallery-item img {
     width: 100%;
-    height: auto;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the space */
     display: block;
     transition: transform 0.3s ease-in-out;
-    cursor: pointer;
-}
-
-.gallery-item:hover img {
-    transform: scale(1.1);
 }
 
 /* Different Image Sizes */
-.gallery-item.large {
-    grid-column: span 2;
-    grid-row: span 2;
+.gallery-item.large { grid-column: span 2; grid-row: span 2; }
+.gallery-item.tall { grid-row: span 2; }
+.gallery-item.wide { grid-column: span 2; }
+
+/* Ensure Consistent Aspect Ratios */
+.gallery-item img {
+    aspect-ratio: 16/9; /* Forces uniform size */
+    height: auto;
 }
 
-.gallery-item.tall {
-    grid-row: span 2;
-}
-
-.gallery-item.wide {
-    grid-column: span 2;
-}
 
 /* Lightbox */
 .lightbox {
