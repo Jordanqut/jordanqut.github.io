@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedbackRP | Home</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <img src="static/Logo/RedbackLogos/RedbackMain.png" alt="RedbackRP Logo" class="hero-logo">
+            <h1 class="welcome-text">
+                <span class="white">WELCOME TO</span> <span class="red">REDBACKRP</span>
+            </h1>            
+            <p id="typewriter-text" class="typewriter"></p>
+
+
+
+    <!-- Call-to-Action Buttons -->
+    <div class="hero-buttons">
+        <a href="https://cfx.re/join/d47do5" class="btn btn-play">PLAY NOW</a>
+        <a href="discord.gg/redbackrp" class="btn btn-discord">DISCORD</a>
+        <a href="https://redbackrp.tebex.io/category/2534444?currency=AUD" class="btn btn-discord">STORE</a>
+        <a href="rules.html" class="btn btn-rules">RULES</a>
+        <a href="gangs.html" class="btn btn-rules">GANGS</a>
+    </div>
+
+        </div>
+    </section>
+
+    <section class="full-screen-server-status">
+        <div class="server-text">
+            <h2>Welcome to <span class="red">RedbackRP</span></h2>
+            <p>Our community is the heart of everything we do. Whether you're a seasoned roleplayer or new to the city, RedbackRP is built for immersive experiences, deep stories, and exciting interactions.</p>
+            <p>Join us today and be part of an ever-growing world filled with endless possibilities!</p>
+        </div>
+
+        <div class="server-status-panel">
+            <h2 class="status-header">LIVE SERVER STATUS</h2>
+
+            <div class="status-box-container">
+                <div class="status-box" id="players-box">
+                    <h3>PLAYERS ONLINE</h3>
+                    <p id="player-count">Loading...</p>
+                </div>
+
+                <div class="status-box offline" id="server-status-box">
+                    <h3>SERVER STATUS</h3>
+                    <p id="server-status">Checking...</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <section class="gallery">
+        <h2>RedbackRP Gallery</h2>
+        <div class="gallery-container" id="gallery-container">
+            <!-- Images will be loaded dynamically here -->
+        </div>
+    </section>
+    <script src="scripts/gallery.js"></script>
+    
+    
+
+
+<section class="community-organizations">
+    <h2>Community Organizations</h2>
+    <div class="toggle-buttons">
+        <button id="showGangs" class="active">Our Gangs</button>
+        <button id="showBusinesses">Our Businesses</button>
+    </div>
+
+    <!-- Gangs Section -->
+    <div class="gangs-container">
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/Capra.png" alt="Capra Racing">
+            <h3>Capra Racing</h3>
+            <p>Street racing legends, dominating the underground circuits.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/CDS.png" alt="CDS">
+            <h3>CDS</h3>
+            <p>A close-knit mafia group running high-stake operations.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/Cerberus.png" alt="Cerberus">
+            <h3>Cerberus</h3>
+            <p>A ruthless organization known for their tactical dominance.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/Fenrir.png" alt="Fenrir">
+            <h3>Fenrir</h3>
+            <p>Viking-inspired warriors ruling the streets with brute force.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/GFS.png" alt="GFS">
+            <h3>GFS</h3>
+            <p>A gang with deep-rooted traditions and a code of honor.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/Harbringers.png" alt="Harbringers">
+            <h3>Harbringers</h3>
+            <p>A feared outlaw biker club with zero tolerance for weakness.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/MPR.png" alt="MPR">
+            <h3>MPR</h3>
+            <p>apes with guns.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/Prophets.png" alt="Prophets">
+            <h3>Prophets</h3>
+            <p>A mysterious cult-like organization with unknown motives.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/Reapers.png" alt="Reapers">
+            <h3>Reapers</h3>
+            <p>Merciless enforcers feared by both criminals and police.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/Reyes.png" alt="Reyes">
+            <h3>Reyes</h3>
+            <p>A powerful Latin cartel controlling vast territories.</p>
+        </div>
+
+        <div class="gang-card">
+            <img src="/static/logo/redbackGangs/la13.png" alt="LA13">
+            <h3>LA13</h3>
+            <p>Bio</p>
+        </div>
+        
+    </div>
+
+    <!-- Businesses Section (Initially Hidden) -->
+    <div class="businesses-container" style="display: none;">
+        <div class="business-card">
+            <img src="/static/logo/redbackBusinesses/BahamaMamas.png" alt="Bahama Mama's">
+            <h3>Bahama Mama's</h3>
+            <p>A luxurious nightclub with exotic drinks and live music.</p>
+        </div>
+
+        <div class="business-card">
+            <img src="/static/logo/redbackBusinesses/Tequilala.webp" alt="Tequilala">
+            <h3>Tequilala</h3>
+            <p>A hotspot for those looking to enjoy a strong drink and a wild night.</p>
+        </div>
+
+        <div class="business-card">
+            <img src="/static/logo/redbackBusinesses/VU.png" alt="Vanilla Unicorn">
+            <h3>Vanilla Unicorn</h3>
+            <p>The city's most famous adult entertainment club.</p>
+        </div>
+
+        <div class="business-card">
+            <img src="/static/logo/redbackBusinesses/YJ.webp" alt="Yellow Jack Inn">
+            <h3>Yellow Jack Inn</h3>
+            <p>A rowdy dive bar where locals and outlaws gather.</p>
+        </div>
+    </div>
+</section>
+
+    
+    
+
+    <!--- FOOTER --->
+    <footer class="footer mt-5 py-3 bg-dark text-white text-center">
+        <p>&copy; 2025 Redback RP. All Rights Reserved.</p>
+    </footer>
+
+
+    <!-- Bootstrap JS Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Custom JS -->
+    <script src="scripts/script.js"></script>
+</body>
+</html>

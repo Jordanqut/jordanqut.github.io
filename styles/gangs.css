@@ -1,0 +1,417 @@
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+}
+
+/* Navbar Styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    z-index: 1000;
+}
+
+.navbar .logo {
+    font-size: 1.5rem;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navbar ul li {
+    display: inline;
+}
+
+.navbar ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: 0.3s;
+}
+
+.navbar ul li a:hover {
+    color: #f33;
+}
+
+/* Return to Top Button */
+#top-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #f33;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+#top-button:hover {
+    background: #c00;
+}
+
+/* Home Button */
+.return-home {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+}
+
+.return-home a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    display: flex;
+    align-items: center;
+}
+
+.return-home a .arrow {
+    margin-right: 8px;
+    font-size: 1.5rem;
+}
+
+/* Hero Section */
+.hero {
+    position: relative;
+    height: 90vh;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 1s ease-in-out;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 1;
+    animation: fadeIn 2s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 4rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    color: #bbb;
+}
+
+/* Gang Progression */
+.gangs-container {
+    padding: 50px 20px;
+    max-width: 1800px;
+    margin: auto;
+}
+
+.gang-tier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.gang-tier {
+    padding: 20px;
+    border-radius: 8px;
+    transition: 0.4s ease-in-out;
+    text-align: left;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    background: rgba(30, 30, 30, 0.9);
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+.gang-tier h2 {
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+}
+
+.gang-tier i {
+    margin-right: 10px;
+}
+
+/* Hover Effects */
+.gang-tier:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+}
+
+/* Tier-Specific Colors */
+.crew { border-left: 5px solid gray; }
+.unverified { border-left: 5px solid silver; }
+.trial-gang { border-left: 5px solid gold; }
+.official-organisation { border-left: 5px solid red; background: radial-gradient(circle, rgba(255,0,0,0.4), rgba(30,30,30,1)); }
+.redback-verified { 
+    border-left: 5px solid darkred; 
+    background: linear-gradient(to right, crimson, black); 
+    animation: fire-glow 2s infinite alternate; 
+}
+
+/* Fire Glow Animation */
+@keyframes fire-glow {
+    from { box-shadow: 0 0 20px red; }
+    to { box-shadow: 0 0 40px orange; }
+}
+
+
+/* Perks List */
+.gang-tier ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.gang-tier ul li {
+    font-size: 16px;
+    padding: 5px;
+    transition: 0.3s;
+}
+
+.gang-tier ul li:hover {
+    transform: scale(1.1);
+}
+
+/* Rules Container */
+.rules-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+    color: #fff;
+    text-align: center;
+}
+
+/* Search Bar */
+#search-rules {
+    width: 25%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    border: none;
+    font-size: 16px;
+    background-color: #222;
+    color: #fff;
+}
+
+/* Accordion Style */
+.accordion {
+    background: #111;
+    border-radius: 5px;
+    overflow: hidden;
+}
+
+.accordion-item {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.accordion-header {
+    width: 100%;
+    padding: 15px;
+    text-align: left;
+    background: #222;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.accordion-header:hover {
+    background: #e50914;
+    color: #fff;
+}
+
+.accordion-content {
+    display: none;
+    padding: 15px;
+    background: #111;
+    font-size: 16px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+/* Opened Accordion Animation */
+.accordion-item.active .accordion-content {
+    display: block;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Last Updated Section */
+.last-updated {
+    margin-top: 20px;
+    font-size: 14px;
+    color: #bbb;
+}
+
+/* Return to Home Button */
+.return-home {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    background: transparent;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.return-home a {
+    color: white;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    transition: 0.3s;
+}
+
+.return-home a:hover {
+    color: #e50914;
+}
+
+.return-home .arrow {
+    font-size: 24px;
+    margin-right: 5px;
+}
+
+/* Gangs Showcase */
+.gangs-showcase {
+    padding: 50px 10%;
+}
+
+.gangs-title {
+    font-size: 2.5rem;
+    color: #ff4d4d;
+    margin-bottom: 10px;
+}
+
+.gangs-description {
+    font-size: 1.2rem;
+    color: #bbb;
+    margin-bottom: 30px;
+}
+
+/* Gang Categories */
+.gangs-category {
+    margin-top: 40px;
+}
+
+.gangs-category-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    padding: 10px;
+    border-radius: 5px;
+    color: white;
+}
+
+/* Gang Cards */
+.gangslist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gang-card {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 20px;
+    width: 250px;
+    text-align: center;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.gang-card:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 10px rgba(255, 77, 77, 0.5);
+}
+
+.gang-card img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 15px;
+}
+
+.gang-card h3 {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.gang-card p {
+    font-size: 1rem;
+    color: #bbb;
+}
+
+/* Responsive Design */
+@media (max-width: 1800px) {
+    .gangslist-container {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Tier-Specific Colors */
+.mapcrew { border-left: 0px solid gray; }
+.mapunverified { border-left: 0px solid silver; }
+.maptrial-gang { border: 1px solid gold; }
+.mapofficial-organisation { border-left: 0px solid red; background: radial-gradient(circle, rgba(255,0,0,0.4), rgba(30,30,30,1)); }
+.mapredback-verified { 
+    background: linear-gradient(to right, crimson, black); 
+}
+
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-5px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+

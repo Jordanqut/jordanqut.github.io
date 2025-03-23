@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RedbackRP | Rules</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+</head>
+<body>
+
+    <div class="return-home">
+        <a href="index.html">
+            <span class="arrow">&#8592;</span> Home
+        </a>
+    </div>
+    
+
+    <section class="rules">
+        <!-- Rules Accordion -->
+        <div class="rules-container">
+            <img src="static/Logo/RedbackLogos/RedbackMain.png" alt="RedbackRP Logo" class="rules-logo"> 
+            <h1 class="rules-title">Server Rules</h1>
+            <input type="text" id="search-rules" placeholder="Search rules..." onkeyup="searchRules()">
+        
+            <div id="server-rules" class="accordion-section">
+                <h2>Global Rules</h2>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'general')">1. General Rules</button>
+                    <div class="accordion-content" id="general"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'respect')">2. Respect</button>
+                    <div class="accordion-content" id="respect"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'staff')">3. Staff</button>
+                    <div class="accordion-content" id="staff"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'hostile')">4. Hostile</button>
+                    <div class="accordion-content" id="hostile"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'breaking')">5. Breaking Character</button>
+                    <div class="accordion-content" id="breaking"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'trolling')">6. Trolling</button>
+                    <div class="accordion-content" id="trolling"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'mature')">7. Mature Content</button>
+                    <div class="accordion-content" id="mature"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'fear')">8. Fear RP/Valuing Life</button>
+                    <div class="accordion-content" id="fear"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'newlife')">9. RRP New Life Rule</button>
+                    <div class="accordion-content" id="newlife"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'injuries')">10. Role Playing Injuries</button>
+                    <div class="accordion-content" id="injuries"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'powergaming')">11. Power Gaming</button>
+                    <div class="accordion-content" id="powergaming"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'metagaming')">12. Meta Gaming</button>
+                    <div class="accordion-content" id="metagaming"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'exploiting')">13. Exploiting</button>
+                    <div class="accordion-content" id="exploiting"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'realistic')">14. Realistic Roleplay</button>
+                    <div class="accordion-content" id="realistic"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'badfaith')">15. Bad Faith Reporting</button>
+                    <div class="accordion-content" id="badfaith"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'additional')">16. Additional Information</button>
+                    <div class="accordion-content" id="additional"></div>
+                </div>
+
+                <h2>RedBack RP Gang + Racing Crew Rules</h2>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'appsmembers')">1. Applications + Member Caps</button>
+                    <div class="accordion-content" id="appsmembers"></div>
+                </div>
+                <div id="gang-rules" class="accordion-section hidden">
+                    <h2>2. Gang Progression & Perks</h2>
+
+                    <div class="accordion-item crew">
+                        <button class="accordion-header" onclick="toggleAccordion(this, 'crew')">
+                            <i class="fas fa-user-friends"></i> Crew
+                        </button>
+                        <div class="accordion-content" id="crew">
+                            <p>This status is for new organised crime groups to start building...</p>
+                            <ul>
+                                <li>🚫 No clothing</li>
+                                <li>🚫 Cannot contest colors or turf</li>
+                                <li>🚫 No perks</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item unverified">
+                        <button class="accordion-header" onclick="toggleAccordion(this, 'unverified')">
+                            <i class="fas fa-user-shield"></i> Unverified
+                        </button>
+                        <div class="accordion-content" id="unverified">
+                            <p>Unverified is the status a gang receives when accepted by Gang Staff.</p>
+                            <ul>
+                                <li>🚫 Cannot contest colors or turf</li>
+                                <li>👕 Can wear generic Redback clothing</li>
+                                <li>🚫 No perks</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item trial-gang">
+                        <button class="accordion-header" onclick="toggleAccordion(this, 'trial-gang')">
+                            <i class="fas fa-briefcase"></i> Trial Gang
+                        </button>
+                        <div class="accordion-content" id="trial-gang">
+                            <p>As a trial gang, you unlock additional gang RP and perks.</p>
+                            <ul>
+                                <li>👕 6x Clothing Items</li>
+                                <li>🚗 Access to gang vehicle sales</li>
+                                <li>🏠 Garage in your desired area</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item official-organisation">
+                        <button class="accordion-header" onclick="toggleAccordion(this, 'official-organisation')">
+                            <i class="fas fa-crown"></i> Official Organisation
+                        </button>
+                        <div class="accordion-content" id="official-organisation">
+                            <p>Official organisations gain access to advanced gang operations.</p>
+                            <ul>
+                                <li>👕 8x Clothing Items</li>
+                                <li>🚗 Access to gang vehicle sales</li>
+                                <li>🚧 Access to gang black market</li>
+                                <li>🏠 Access to Gang Warehouse</li>
+                                <li>🎨 Custom logo in spray paint</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item redback-verified">
+                        <button class="accordion-header" onclick="toggleAccordion(this, 'redback-verified')">
+                            <i class="fas fa-dragon"></i> Redback Verified Organisation
+                        </button>
+                        <div class="accordion-content" id="redback-verified">
+                            <p>The elite level of organised crime within RedbackRP.</p>
+                            <ul>
+                                <li>🔥 10x Clothing Items</li>
+                                <li>🚗 Access to gang vehicle sales</li>
+                                <li>🎨 Custom logo in spray paint</li>
+                                <li>🏠 Access to Gang MLO & MLO garage</li>
+                                <li>🛒 Access to Redback Tier 2 Shop</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <h2>2.1 Crew Progression</h2>
+
+                    <div class="accordion-item trial-racing">
+                        <button class="accordion-header" onclick="toggleAccordion(this, 'trial-racing')">
+                            <i class="fas fa-car"></i> Trial Racing Crew
+                        </button>
+                        <div class="accordion-content" id="trial-racing">
+                            <p>Entry-level racing crews with access to vehicle perks.</p>
+                            <ul>
+                                <li>🏁 6x Clothing Items</li>
+                                <li>🚗 Access to gang vehicle sales</li>
+                                <li>🏠 Garage in your desired area</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item verified-racing">
+                        <button class="accordion-header" onclick="toggleAccordion(this, 'verified-racing')">
+                            <i class="fas fa-flag-checkered"></i> Verified Racing Crew
+                        </button>
+                        <div class="accordion-content" id="verified-racing">
+                            <p>Elite racing crews with exclusive benefits.</p>
+                            <ul>
+                                <li>🔥 10x Clothing Items</li>
+                                <li>🚗 Access to gang vehicle sales</li>
+                                <li>🎨 Custom racing crew logo</li>
+                                <li>🏠 Access to MLO clubhouse / workshop</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <h2>Gang/Crew Rules</h2>
+
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'generalgang')">3. General Gang / Racing Crew Rules</button>
+                    <div class="accordion-content" id="generalgang"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'ganghostile')">4. Hostile RP Rules</button>
+                    <div class="accordion-content" id="ganghostile"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'pkscooldowns')">5. PKs + Cooldowns</button>
+                    <div class="accordion-content" id="pkscooldowns"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'colorturf')">6. Color + Turf contesting</button>
+                    <div class="accordion-content" id="colorturf"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'gangdemands')">7. Demands</button>
+                    <div class="accordion-content" id="gangdemands"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'gangarounds')">8. Hangarounds, prospects, associates</button>
+                    <div class="accordion-content" id="gangarounds"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'gangmisc')">9. Misc Rules</button>
+                    <div class="accordion-content" id="gangmisc"></div>
+                </div>
+                <div class="accordion-item">
+                    <button class="accordion-header" onclick="toggleAccordion(this, 'gangpunish')">10. Punishments</button>
+                    <div class="accordion-content" id="gangpunish"></div>
+                </div>
+            </div>
+        
+            <p class="last-updated">Rules are subject to change at Admin discretion at any time.<br> Last Updated: February 27, 2025</p>
+        </div>
+        
+        <script src="scripts/rules.js"></script>
+        <script>
+            document.getElementById("last-updated").textContent = "February 27, 2025"; 
+        </script>
+    </section>
+
+    <!-- Return to Top Button -->
+    <button id="top-button" onclick="scrollToTop()">↑ Top</button>
+
+
+    <script src="scripts/rules.js"></script>
+
+
+</body>
+</html>
