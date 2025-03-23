@@ -1,16 +1,23 @@
 document.addEventListener("DOMContentLoaded", function () {
-    const galleryContainer = document.getElementById("gallery-container");
+    const galleryItems = document.querySelectorAll(".gallery-item img");
+    const lightbox = document.getElementById("lightbox");
+    const lightboxImg = document.getElementById("lightbox-img");
+    const closeBtn = document.querySelector(".close");
 
+    galleryItems.forEach(item => {
+        item.addEventListener("click", () => {
+            lightbox.style.display = "flex";
+            lightboxImg.src = item.src;
+        });
+    });
 
-    if (imageFiles.length === 0) {
-        galleryContainer.innerHTML = "<p>No images found.</p>";
-        return;
-    }
+    closeBtn.addEventListener("click", () => {
+        lightbox.style.display = "none";
+    });
 
-    imageFiles.forEach(imageSrc => {
-        let imgElement = document.createElement("div");
-        imgElement.classList.add("gallery-item");
-        imgElement.innerHTML = `<img src="${imageSrc}" alt="Gallery Image">`;
-        galleryContainer.appendChild(imgElement);
+    lightbox.addEventListener("click", (e) => {
+        if (e.target === lightbox) {
+            lightbox.style.display = "none";
+        }
     });
 });
