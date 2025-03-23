@@ -113,7 +113,7 @@ body {
 .hero {
     position: relative;
     height: 100vh;
-    background: url('https://media.discordapp.net/attachments/1313394622130814996/1349206547053678642/Screenshot_2025-03-10_155957.png?ex=67d24203&is=67d0f083&hm=8b698970248b93b4e8145368c49fcad0cd5a1b9a20dba034e428b54e169001d7&=&format=webp&quality=lossless&width=1529&height=800') no-repeat center center/cover;
+    background: url('\static\gallery\reapers.png') no-repeat center center/cover;
     display: flex;
     align-items: center;
     justify-content: center;
